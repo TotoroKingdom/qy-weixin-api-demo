@@ -6,7 +6,7 @@ from datetime import datetime
 from config.settings import (
     PROJECT_ROOT,
     WEWORK_API_BASE_URL,
-    MOBILE,
+    MOBILE
 )
 
 from experiments.step01_auth import run as get_token
@@ -24,12 +24,16 @@ def run() -> dict:
 
     token_result = auth_result["result"]
 
+
+    MOBILE: str = "13415152421"
+
     if token_result.get("errcode") != 0:
         result = {
             "ok": False,
             "message": "获取 access_token 失败",
             "auth_result": token_result,
         }
+
 
     elif not MOBILE:
         result = {
