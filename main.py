@@ -1,11 +1,4 @@
-import json
-
-from experiments.step01_auth import run
-
-
-def main() -> None:
-    result = run()
-    print(json.dumps(result, ensure_ascii=False, indent=2))
+from experiments.step02_space import main
 
 
 if __name__ == "__main__":

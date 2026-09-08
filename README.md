@@ -17,21 +17,27 @@ pip install -r requirements.txt
 copy .env.example .env
 ```
 
-在 `.env` 中填写企业微信配置后运行：
+在 `.env` 中填写企业微信配置后，按以下顺序逐个运行实验：
 
-```bash
-python main.py
+```powershell
+python .\experiments\step01_auth.py
+python .\experiments\step02_get_userid.py
+python .\experiments\step03_create_space.py
+python .\experiments\step04_space_info.py
+python .\experiments\step05_add_space_member.py
+python .\experiments\step06_file_list.py
 ```
 
 未配置凭据时，第一步实验会给出配置提示，不会发起 API 请求。
 
 ## 学习步骤
 
-1. `step01_auth.py`：获取 `access_token`
-2. `step02_space.py`：查询微盘空间
-3. `step03_file_list.py`：查询文件列表
-4. `step04_file_info.py`：查询文件信息
-5. `step05_download.py`：下载文件
+1. `step01_auth.py`：认证并获取 `access_token`
+2. `step02_get_userid.py`：通过手机号获取用户 `userid`
+3. `step03_create_space.py`：创建微盘空间
+4. `step04_space_info.py`：查询微盘空间信息
+5. `step05_add_space_member.py`：为微盘空间添加成员权限
+6. `step06_file_list.py`：获取微盘空间文件列表
 
 ## 验证记录
 
